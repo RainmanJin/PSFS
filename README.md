@@ -28,6 +28,8 @@ Open theweb server configuration file, edit or add location block, point to the 
 2. Select a file and click submit, if you see a json string contains code and message, the file server should be running properly.
 
 Java Code block to upload a file:
+
+<pre><code>
   String fileServerInnerUrl = "http://192.168.10.3"; //LAN
   String fileServerPublicUrl="http://xxx.xxx.com"; //WAN
 	CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -55,5 +57,4 @@ Java Code block to upload a file:
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
-
-
+</pre></code>
