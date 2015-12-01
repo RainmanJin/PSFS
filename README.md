@@ -35,6 +35,7 @@ Java Code block to upload a file:
 <pre><code>
   String fileServerInnerUrl = "http://192.168.10.3"; //LAN
   String fileServerPublicUrl="http://xxx.xxx.com"; //WAN
+  String fileServerToken="asdfasdfadsfasdfwerqwer"; //token
 	CloseableHttpClient httpClient = HttpClients.createDefault();
 	HttpPost httpPost = new HttpPost(fileServerInnerUrl + "file-upload.php");
 	MultipartEntityBuilder meb = MultipartEntityBuilder.create();
