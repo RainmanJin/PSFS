@@ -39,6 +39,7 @@ Java Code block to upload a file:
 	HttpPost httpPost = new HttpPost(fileServerInnerUrl + "file-upload.php");
 	MultipartEntityBuilder meb = MultipartEntityBuilder.create();
 	meb.addPart("file", new FileBody(file));
+	meb.addTextBody("token", fileServerToken);  
 	HttpEntity reqEntity = meb.build(); 
 	httpPost.setEntity(reqEntity);
 	String strResult = null;
