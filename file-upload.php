@@ -2,13 +2,18 @@
 <?php
 error_reporting(0);
 date_default_timezone_set("PRC");
+$token = $_POST['token'];
 $folder = "images/";
 $dir = date("Y/m/d/");
 $extension = strtolower(substr(strrchr($_FILES["file"]["name"], '.'), 1));
 $filename = date("Ymd").getMillisecond().rand(1000,9999).".".$extension;
 $allow_filetype = explode("|", "gif|jpg|png|jpeg|bmp|pjpeg|ppt|rar|zip|doc|pdf|docx|xls|xlsx|pptx|txt"); 
 $result = "";
-if(!in_array($extension,$allow_filetype))
+if($token != "989h8u9fas8d979s8d9u9asdXXX")
+{
+	$result = json_encode(array('code'=>9,'message'=>"Token非法！"));
+	echo $result;
+} elseif (!in_array($extension,$allow_filetype))
 {
 	$result = json_encode(array('code'=>9,'message'=>"禁止上传此类文件！"));
 	echo $result;
