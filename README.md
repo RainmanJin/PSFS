@@ -5,6 +5,7 @@ This is a really simple solution to build a Central File Server for your site.
 
 极简版的PHP文件服务器，可以应用于对文件服务性能和可用性要求不高的网站。
 只有两个PHP文件，可以实现接收和保存POST过来的文件，并返回文件URL的功能。后续会继续进行扩展。
+代码中的文件上传令牌是写死的，可以根据自己的需要进行访问合法性验证。
 
 #Setup a place for your source code and Uploaded Files 创建PHP代码和文件保存目录
 
